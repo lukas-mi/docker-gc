@@ -62,9 +62,9 @@ for pid in $(pidof -s docker-gc); do
     fi
 done
 
-trap "rm -f -- '$PID_DIR/dockergc'" EXIT
+# trap "rm -f -- '$PID_DIR/dockergc'" EXIT
 
-echo $$ > $PID_DIR/dockergc
+# echo $$ > $PID_DIR/dockergc
 
 
 EXCLUDE_FROM_GC=${EXCLUDE_FROM_GC:=/etc/docker-gc-exclude}
